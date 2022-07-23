@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --safron: #ffd89f;
+  --safron_dark: #d88001;
+  --black_grey: #3d455b;
+  --black_dark: #2c2c3f;
+  --light-grey: #eff2f6;
+  --black: #231f20;
+  --bluish_pink: #d3d2fc;
+  --pink_dark: #fd346e;
+  --blue_dark: #3448fa;
+  --light_sky: #b2e3ff;
+  --white: #ffffff;
+  --lighter_green: #0fbc93;
+  --cool_green: #27b69c;
+  --peach_light: #ffe7c5;
+  --peach_dark: #fccf8d;
+  --dark_pink: #fd346e;
+}
+
+@font-face {
+  font-family: "Loto Regular";
+  src: url("./assets/lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Loto Bold";
+  src: url("./assets/lato/Lato-Bold.ttf") format("truetype");
+}
+
+.f-32 {
+  font-size: 32px;
+}
+
+.f-26 {
+  font-size: 26px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-18 {
+  font-size: 16px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-13 {
+  font-size: 13px;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+.f-11 {
+  font-size: 11px;
+}
+
+.f-10 {
+  font-size: 10px;
+}
+
+.lato_bold {
+  font-family: "Loto Bold";
+}
+
+.lato_regular {
+  font-family: "Loto Regular";
+}
+
+.border_radius_10 {
+  border-radius: 10px;
+}
+
+.border_radius_5 {
+  border-radius: 5px;
+}

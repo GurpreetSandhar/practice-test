@@ -1,0 +1,17 @@
+
+@media only screen and (min-width: 991px) {
+    .lg-screen {
+        display: none;
+    }
+  }
+
+  .black_grey_text {
+    color: var(--black_grey);
+}
+
+.border_arrow {
+    border: 1px solid #dcdfe2;
+    border-radius: 50%;
+    background-color: #dcdfe2;
+    padding: 4px;
+}

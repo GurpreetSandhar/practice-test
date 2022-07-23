@@ -1,0 +1,85 @@
+.btn_td {
+  min-width: 300px;
+}
+
+.createBtn {
+  font-weight: 500;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.blue {
+  color: #007bff;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.userList {
+  flex: 0 1 23%;
+}
+
+.summary {
+  flex: 1;
+}
+
+.text_black_dark {
+  color: var(--black_dark);
+}
+
+.black_grey_text {
+  color: var(--black_grey);
+}
+
+.black_text {
+  color: var(--black);
+}
+
+.pink_dark_text {
+  color: var(--pink_dark);
+}
+
+.blue_dark_text {
+  color: var(--blue_dark);
+}
+
+.safron_dark_icon {
+  color: var(--safron_dark);
+}
+
+.lighter_green_text {
+  color: var(--lighter_green);
+}
+
+.border_info {
+  border: 2px solid var(--peach_dark);
+  background-color: var(--peach_light);
+}
+
+.table_btn {
+  border: 0px;
+  border-radius: 12px;
+  padding: 4px 18px;
+  background: var(--black_grey);
+  color: var(--white);
+}
+
+.table_btn_active {
+  background: var(--dark_pink);
+  color: var(--white);
+}
+
+thead tr {
+  background-color: #eff2f6;
+}
+
+.table_status_btn {
+  border: 1.5px solid;
+  background: white;
+  border-radius: 6px;
+  padding-left: 10px;
+  font-size: 11px;
+}

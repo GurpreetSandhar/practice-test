@@ -1,0 +1,26 @@
+.container-wrapper {
+  display: flex;
+  background-color: var(--light-grey);
+  height: auto;
+}
+
+.sidebar-wrapper {
+  flex: 0 1 5%;
+  background: var(--black_grey);
+  height: 100vh;
+}
+
+.main-wrapper {
+  flex: 1;
+  height: 90vh;
+}
+
+@media only screen and (max-width: 990px) {
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  .main-wrapper {
+    width: 100%;
+  }
+}

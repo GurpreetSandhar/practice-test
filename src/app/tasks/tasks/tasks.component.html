@@ -1,0 +1,192 @@
+<section class="col-12">
+  <div class="card border_radius_10">
+    <div class="d-flex">
+      <div class="userList">
+        <app-user-stories-list
+          (selectedStory)="selectedStory($event)"
+        ></app-user-stories-list>
+      </div>
+      <div class="summary">
+        <div class="mx-4 mt-3">
+          <div>
+            <span class="f-20 lato_bold text_black_dark"
+              >Summary : WAT-936</span
+            >
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <span class="f-16 lato_bold black_grey_text">Test Cases</span>
+              <div class="border mt-2 border_radius_10">
+                <div class="row">
+                  <div
+                    class="col-3 border-right d-flex flex-column align-items-center py-3"
+                  >
+                    <span class="black_grey_text f-16 lato_bold">Total</span>
+                    <span class="pt-2 lighter_green_text lato_regular f-24">{{
+                      selectedUserStory?.testCases[0]?.total
+                    }}</span>
+                  </div>
+                  <div
+                    class="col-3 border-right d-flex flex-column align-items-center py-3"
+                  >
+                    <span class="black_grey_text f-16 lato_bold">Passed</span>
+                    <span class="pt-2 lighter_green_text lato_regular f-24">{{
+                      selectedUserStory?.testCases[0]?.passed
+                    }}</span>
+                  </div>
+                  <div
+                    class="col-3 border-right d-flex flex-column align-items-center py-3"
+                  >
+                    <span class="black_grey_text f-16 lato_bold">Failed</span>
+                    <span class="pt-2 pink_dark_text lato_regular f-24">{{
+                      selectedUserStory?.testCases[0]?.failed
+                    }}</span>
+                  </div>
+                  <div class="col-3 d-flex flex-column align-items-center py-3">
+                    <span class="black_grey_text f-16 lato_bold"
+                      >Not Executed</span
+                    >
+                    <span class="pt-2 pink_dark_text lato_regular f-24">{{
+                      selectedUserStory?.testCases[0]?.notExecuted
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <span class="f-16 lato_bold black_grey_text">Test Packs</span>
+              <div class="border mt-2 border_radius_10">
+                <div class="row">
+                  <div
+                    class="col-3 border-right d-flex flex-column align-items-center py-3"
+                  >
+                    <span class="black_grey_text f-16 lato_bold">Total</span>
+                    <span class="pt-2 lighter_green_text lato_regular f-24">{{
+                      selectedUserStory?.testPacks[0]?.total
+                    }}</span>
+                  </div>
+                  <div
+                    class="col-3 border-right d-flex flex-column align-items-center py-3"
+                  >
+                    <span class="black_grey_text f-16 lato_bold">Passed</span>
+                    <span class="pt-2 lighter_green_text lato_regular f-24">{{
+                      selectedUserStory?.testPacks[0]?.passed
+                    }}</span>
+                  </div>
+                  <div
+                    class="col-3 border-right d-flex flex-column align-items-center py-3"
+                  >
+                    <span class="black_grey_text f-16 lato_bold">Failed</span>
+                    <span class="pt-2 pink_dark_text lato_regular f-24">{{
+                      selectedUserStory?.testPacks[0]?.failed
+                    }}</span>
+                  </div>
+                  <div class="col-3 d-flex flex-column align-items-center py-3">
+                    <span class="black_grey_text f-16 lato_bold"
+                      >Not Executed</span
+                    >
+                    <span class="pt-2 pink_dark_text lato_regular f-24">{{
+                      selectedUserStory?.testPacks[0]?.notExecuted
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-4 col-5 pl-0">
+            <div
+              class="p-2 align-items-center border_radius_5 border_info d-flex align-items-center"
+            >
+              <span class="material-icons-outlined safron_dark_icon f-16 ml-2">
+                info
+              </span>
+              <span class="ml-2 black_grey_text lato_regular f-13">
+                Test cases are not modified since 28 April 2022
+              </span>
+            </div>
+          </div>
+          <div class="py-4 pl-0 col-12 d-flex justify-content-between">
+            <div>
+              <button
+                class="table_btn f-12"
+                [ngClass]="{
+                  table_btn_active: selectedTableButton === 'TEST CASES'
+                }"
+                (click)="selectedTablebtn('TEST CASES')"
+              >
+                TEST CASES
+              </button>
+              <button
+                class="table_btn f-12 ml-3"
+                [ngClass]="{
+                  table_btn_active: selectedTableButton === 'TEST PACKS'
+                }"
+                (click)="selectedTablebtn('TEST PACKS')"
+              >
+                TEST PACKS
+              </button>
+            </div>
+            <div>
+              <span class="material-icons-outlined f-26" style="color: #27b69c">
+                add_circle
+              </span>
+              <span class="material-icons-outlined f-26 mx-3 black_grey_text">
+                file_upload
+              </span>
+              <span class="material-icons-outlined f-26 black_grey_text">
+                open_in_full
+              </span>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Summary</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Mode</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of tableResponse; index as i">
+                  <th scope="row">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                    />
+                  </th>
+                  <td class="blue_dark_text f-14 lato_regular">
+                    {{ data?.id }}
+                  </td>
+                  <td class="black_grey_text f-14 lato_regular">
+                    {{ data?.summary }}
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="table_status_btn d-flex align-items-center f-11 lato_bold"
+                    >
+                      <span>{{ data?.status }}</span>
+                      <span class="material-icons-outlined f-20">
+                        more_vert
+                      </span>
+                    </button>
+                  </td>
+                  <td>
+                    <span class="material-icons-outlined black_text f-24">
+                      settings
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

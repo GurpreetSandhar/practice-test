@@ -1,0 +1,65 @@
+.btn_user {
+  border-radius: 8px;
+  font-size: 11px;
+  border-color: transparent;
+  // padding: 1px 16px;
+  width: 68px;
+  color: var(--black_grey);
+}
+
+.review_btn {
+  background-color: var(--safron);
+}
+
+.dev_done_btn {
+  background-color: var(--bluish_pink);
+}
+
+.done_btn {
+  background-color: var(--light_sky);
+}
+
+.white_border_btn {
+  background-color: var(--white);
+  border: 1px solid var(--black_grey);
+}
+
+.blue_dark_text {
+  color: var(--blue_dark);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.black_grey_text {
+  color: var(--black_grey);
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.active_list {
+  background: #f4f7f8;
+  border-left: 3px solid #82ddbc;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.cool_green_icon {
+  color: var(--cool_green);
+}
+
+.serach_input {
+  border: 0px;
+  background: #e3e5ed;
+  height: 34px;
+  border-radius: 10px;
+  padding-left: 12px;
+}

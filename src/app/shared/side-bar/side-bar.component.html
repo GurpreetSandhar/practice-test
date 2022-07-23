@@ -1,0 +1,37 @@
+<ul class="side-bar-main">
+  <li class="border_bottom_logo">
+    <a>
+      <img src="assets/images/company_logo.svg" alt="company_logo" />
+    </a>
+  </li>
+  <li [ngClass]="{ active: activeUrl === '/' }">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active">
+      <span class="material-icons-outlined f-26"> analytics </span>
+    </a>
+  </li>
+  <li [ngClass]="{ active: activeUrl === '/contact-us' }">
+    <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active">
+      <span class="material-icons-outlined f-26"> leaderboard </span>
+    </a>
+  </li>
+  <li>
+    <a routerLinkActive="router-link-active">
+      <span class="material-icons-outlined f-26"> person </span>
+    </a>
+  </li>
+  <li>
+    <a routerLinkActive="router-link-active">
+      <span class="material-icons-outlined f-26"> cases </span>
+    </a>
+  </li>
+  <li>
+    <a routerLinkActive="router-link-active">
+      <span class="material-icons-outlined f-26"> calendar_month </span>
+    </a>
+  </li>
+  <li>
+    <a routerLinkActive="router-link-active">
+      <span class="material-icons-outlined f-26"> receipt_long </span>
+    </a>
+  </li>
+</ul>
