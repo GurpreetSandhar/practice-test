@@ -12,7 +12,6 @@ export class SideBarComponent implements OnInit {
   public sidebarShow: boolean = false;
   constructor(private router: Router) { 
     this.router.events.subscribe(res=>{
-      console.log("res of ",res['url']);
       this.activeUrl = res['url'];
     })
   }
